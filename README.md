@@ -8,11 +8,14 @@ observing sector than the training set.
 ## Results
 | | macro-F1 |
 |---|---|
-| 5-fold CV (grouped by camera/CCD), argmax | 0.7045 |
-| 5-fold CV, tuned class multipliers | 0.7156 |
+| **Private leaderboard (hidden 70% of test)** | **0.6508** |
 | Public leaderboard (30% of test) | 0.6678 |
-| **Private leaderboard (hidden 70%)** | **0.6508** |
+| 5-fold CV, grouped by camera/CCD, argmax | 0.7092 |
+| 5-fold CV, tuned class multipliers | 0.7187 |
 
+The submitted predictions in `results/submission.csv` come from the original run of this
+pipeline. CV numbers above are from a fresh rerun in Google Colab (`run_colab.ipynb`);
+they differ by about 0.003 to 0.005 from the original run because of library versions.
 The ~0.065 drop from CV to the private score is attributed to train/test sector shift
 (more scattered light and different thruster-dump timing in the test sector).
 
@@ -39,8 +42,7 @@ python features.py test
 python features.py train
 python train.py          # writes submission.csv
 ```
-Feature extraction takes ~16 minutes on one CPU core. The competition data is not
-included in this repo.
+Feature extraction takes ~16 minutes on one CPU core. The competition data is not included in this repo.A ready-to-run Colab version with outputs is in `run_colab.ipynb`.
 
 ## Limitations and next steps
 - Weakest classes: starspots (F1 0.57) and planet (0.61), mostly confused with quiet stars.
