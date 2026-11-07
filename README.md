@@ -42,7 +42,7 @@ python features.py test
 python features.py train
 python train.py          # writes submission.csv
 ```
-Feature extraction takes ~16 minutes on one CPU core. The competition data is not included in this repo.A ready-to-run Colab version with outputs is in `run_colab.ipynb`.
+Feature extraction takes ~16 minutes on one CPU core. The competition data is not included in this repo. A ready-to-run Colab version with outputs is in `run_colab.ipynb`.
 
 ## Limitations and next steps
 - Weakest classes: starspots (F1 0.57) and planet (0.61), mostly confused with quiet stars.
