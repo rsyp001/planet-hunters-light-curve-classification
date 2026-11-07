@@ -1,0 +1,12 @@
+*.npy
+*.parquet
+*.zip
+train_*.csv
+test_*.csv
+sample_submission.csv
+__pycache__/
+.ipynb_checkpoints/
+oof*.npy
+pte*.npy
+wts*.npy
+log_*.txt
